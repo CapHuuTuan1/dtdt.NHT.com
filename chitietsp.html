@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCLshop.com.vn/san-pham</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <style>
+        img {
+            width: 100%;
+        }
+
+        #anhsanpham img {
+            margin-top: 20px;
+            width: 100%;
+            transition: all .3s ease;
+        }
+
+            #anhsanpham img:hover {
+                transform: scale(1.5);
+            }
+
+        #anhsanpham p {
+            display: block;
+            overflow: hidden;
+        }
+
+        #review {
+            font-size: 150%;
+            line-height: 30px;
+        }
+
+        .khuyen-mai-hb {
+            margin-bottom: 2px;
+            margin-top: 2px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ef0b0b;
+            font-size: 15px;
+            width: 100%;
+        }
+
+            .khuyen-mai-hb .tieu-de {
+                background: #e31616;
+                padding: 2px 20px;
+                margin-top: -24px;
+                font-size: 15px;
+                font-weight: 500;
+                color: #ffffff;
+                display: block;
+                max-width: 207px;
+                border-radius: 99px;
+            }
+
+            .khuyen-mai-hb ul {
+                margin-bottom: 4px;
+                padding: 10px;
+            }
+
+            .khuyen-mai-hb li {
+                margin: 10px;
+            }
+
+        ul.comment {
+            list-style: none;
+            display: inline-block;
+            font-size: 120%;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="img/bf.jpg" alt=""></a>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><img style="width:100px" src="img/logo.jpg" alt=""></a></li>
+                <li id="address-form"><a href="#">Hồ Chí Minh<i class="fas fa-sort-down"></i></a></li>
+                <li><input type="text" placeholder="Bạn tìm gì..."><i class="fas fa-search"></i></li>
+                <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Giỏ hàng</button></li>
+                <li><a href="">Lịch sử<br> đơn hàng</a></li>
+                <li><a href=""></a></li>
+                <li><a href="tintuc.html">24h Công nghệ</a></li>
+                <li><a href="tranglienhe/index.html">Liên hệ</a></li>
+
+                <div class="address-form">
+                    <div class="address-form-content">
+                        <h2>Chọn địa chỉ nhận hàng<span id="address-close">X Đóng</span></h2>
+                        <form action="">
+                            <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao hàng.</p>
+                            <select name="calc_shipping_provinces" required="">
+                                <option value="">Tỉnh / Thành phố</option>
+                            </select>
+                            <select name="calc_shipping_district" required="">
+                                <option value="">Quận / Huyện</option>
+                            </select>
+                            <input class="billing_address_1" name="" type="hidden" value="">
+                            <input class="billing_address_2" name="" type="hidden" value="">
+                            <input type="text" placeholder="Số nhà, tên đường" />
+                            <button>XÁC NHẬN</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href="dienthoai.html"><i class="fas fa-mobile-alt"></i>Điện thoại</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-laptop"></i>Laptop</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-tablet"></i>Tablet</a></li>
+                    <li>
+                        <a href=""><i class="fas fa-headphones-alt"></i>Phụ kiện<i style="margin-left: 3px;" class="fas fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <div class="PKDD">
+                                <strong>Phụ kiện di động</strong>
+                                <ul>
+                                    <li><a href="dienthoai.html">Pin sạc dự phòng</a></li>
+                                    <li><a href="dienthoai.html">Miếng dán màn hình</a></li>
+                                    <li><a href="dienthoai.html">Sạc, cáp</a></li>
+                                    <li><a href="dienthoai.html">Ốp lưng điện thoại</a></li>
+                                    <li><a href="dienthoai.html">Ốp lưng máy tính bảng</a></li>
+                                    <li><a href="dienthoai.html">Túi đựng Airpods</a></li>
+                                    <li><a href="dienthoai.html">Phụ kiện IPad</a></li>
+                                    <li><a href="dienthoai.html">Giá đỡ laptop, điện thoại</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-cate">
+                                <div class="PKLT">
+                                    <strong>Phụ kiện Laptop</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Chuột, bàn phím</a></li>
+                                        <li><a href="dienthoai.html">Camera, Webcam</a></li>
+                                        <li><a href="dienthoai.html">Thiết bị mạng</a></li>
+                                        <li><a href="dienthoai.html">Balo, túi chống sốc</a></li>
+                                    </ul>
+                                </div>
+                                <div class="PKCH">
+                                    <strong>Thương hiệu hàng đầu</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Apple</a></li>
+                                        <li><a href="dienthoai.html">Samsung</a></li>
+                                        <li><a href="dienthoai.html">Sony</a></li>
+                                    </ul>
+                                </div>
+                                <div class="TBAT">
+                                    <strong>Thiết bị âm thanh</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Tai nghe</a></li>
+                                        <li><a href="dienthoai.html">Loa</a></li>
+                                    </ul>
+                                    <div class="TBLT">
+                                        <strong>Thiết bị lưu trữ</strong>
+                                        <ul>
+                                            <li><a href="dienthoai.html">Thẻ nhớ</a></li>
+                                            <li><a href="dienthoai.html">USB</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="PKK">
+                                        <strong>Phụ kiện khác</strong>
+                                        <ul>
+                                            <li><a href="dienthoai.html">Thiết bị thông minh</a></li>
+                                            <li><a href="dienthoai.html">Máy chiếu, TV Box</a></li>
+                                            <li><a href="dienthoai.html">Quạt mini</a></li>
+                                            <li><a href="dienthoai.html">Pin điện thoại</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                    <li><a href="dienthoai.html"><i class="fas fa-watch-fitness"></i>Đồng hồ thông minh</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-watch"></i>Đồng hồ</a></li>
+                    <li>
+                        <a href=""><i class="fas fa-desktop"></i>PC<i style="margin-left: 3px;" class="fas fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="dienthoai.html">Màn hình máy tính</a></li>
+                                <li><a href="dienthoai.html">Máy tính để bàn</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="dienthoai.html">Máy cũ giá rẻ</a></li>
+                    <li><a href="dienthoai.html">Sim, thẻ cào</a></li>
+                    <li><a href="dienthoai.html">Trả góp điện nước</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="content" class="container-fluid">
+        <h4>
+            <strong>Điện thoại iPhone 13 Pro Max 256GB </strong>
+            <span>
+
+                <i class="fas fa-star" style="color: orange;"></i>
+                <i class="fas fa-star" style="color: orange;"></i>
+                <i class="fas fa-star" style="color: orange;"></i>
+                <i class="fas fa-star" style="color: orange;"></i>
+                <i class="fas fa-star" style="color: orange;"></i>
+            </span>
+            <span> đánh giá <span class="badge">10</span></span><br>
+        </h4>
+
+
+        <!-- dòng 1 -->
+        <div class="row">
+            <div class="col-md-7" id="anhsanpham">
+                <div class="row">
+
+                    <div class="col-xs-4">
+                        <p><img src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-xanh-5.jpg"></p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p><img src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-xanh-6.jpg"></p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p><img src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-xanh-11.jpg"></p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <p><img src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-xanh-12.jpg"></p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p><img src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-xanh-7.jpg"></p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p><img src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-xanh-1.jpg"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5" id="des">
+
+                <div class="row">
+
+                    <table class="table table-striped">
+                        <thead>
+                            <h4><strong>Cấu hình Điện thoại iPhone 13 Pro Max 256GB</strong></h4>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Màn hình:</td>
+                                <td>OLED6.7"Super Retina XDR</td>
+                            </tr>
+                            <tr>
+                                <td>Hệ điều hành:</td>
+                                <td> iOS 15</td>
+                            </tr>
+                            <tr>
+                                <td>Camera sau:</td>
+                                <td>3 camera 12 MP</td>
+                            </tr>
+                            <tr>
+                                <td>Camera trước:</td>
+                                <td>12 MP</td>
+                            </tr>
+                            <tr>
+                                <td>Chip:</td>
+                                <td>
+                                    Apple A15 Bionic
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RAM:</td>
+                                <td>6 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Bộ nhớ trong:</td>
+                                <td>
+                                    256 GB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- dòng 2 -->
+        <div class="row">
+            <!-- bài viết đánh giá -->
+            <div class="col-md-7">
+                <div class="container-fluid" id="review">
+
+                    <h3><strong>Bài viết đánh giá</strong></h3>
+                    <h3 style="text-align: justify;">Thiết kế đẳng cấp, sang trọng</h3>
+                    <p style="text-align: justify;">
+                        iPhone 13 Pro Max vẫn sẽ kế thừa thiết kế đặc trưng của  iPhone 12 Series,                            
+                         vẫn là một sản phẩm với khung viền được hoàn thiện từ thép không gỉ, hai mặt trước sau được trang bị kính cường lực bóng bẩy.
+                    </p>
+                    <p style="text-align: justify;">
+                        <a class="preventdefault" href="#" onclick="return false;">
+                            <img alt="Thiết kế nguyên khối đẳng cấp - iPhone 13 Pro Max 256GB" data-src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-256gb-1.jpg" class=" ls-is-cached lazyloaded" title="Thiết kế nguyên khối đẳng cấp - iPhone 13 Pro Max 256GB"
+                                 src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-256gb-1.jpg">
+                        </a>
+                    </p>
+                    <p style="text-align: justify;">
+                        Điểm thay đổi lớn trên 13 Pro Max có thể là phần module camera được làm to hơn khá nhiều, phần cạnh viền máy được vát phẳng sang trọng cùng bốn góc được làm bo cong nhẹ, phủ một lớp mờ giúp hạn chế bám bụi bẩn và vân
+                        tay.
+                    </p>
+                    <p style="text-align: justify;">
+                        <a class="preventdefault" href="#" onclick="return false;">
+                            <img alt="Ngoại hình trẻ trung -  iPhone 13 Pro Max 256GB" data-src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-256gb-2.jpg" class=" ls-is-cached lazyloaded" title="Ngoại hình trẻ trung -  iPhone 13 Pro Max 256GB"
+                                 src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-256gb-2.jpg">
+                        </a>
+                    </p>
+                    <p style="text-align: justify;">
+                        Ngoài ra, iPhone 13 Pro Max cũng sẽ đảm bảo được khả năng kháng nước và bụi
+                        với chuẩn IP68 và sẽ được ra mắt với nhiều tùy chọn màu sắc khác nhau bao gồm một số màu nổi bật như: Vàng, bạc, xanh dương và xám.
+                    </p>
+                    <p style="text-align: justify;">
+                        <a class="preventdefault" href="#" onclick="return false;">
+                            <img alt="Khả năng kháng bụi, nước - iPhone 13 Pro Max 256GB" data-src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-256gb-3.jpg" class=" ls-is-cached lazyloaded" title="Khả năng kháng bụi, nước - iPhone 13 Pro Max 256GB"
+                                 src="https://cdn.tgdd.vn/Products/Images/42/250261/iphone-13-pro-max-256gb-3.jpg">
+                        </a>
+                    </p>
+                    <h3 style="text-align: justify;">Màn hình OLED với thiết kế tai thỏ gọn hơn</h3>
+                    <p style="text-align: justify;">
+                        Các thông số màn hình của iPhone 13 Pro Max gồm: Kích thước lớn 6.7 inch, tấm nền Super Retina XDR OLED và độ phân giải 1284 x 2778 Pixels cho mật độ điểm ảnh 458 ppi với khả năng hiển thị màu sắc nét độ chi tiết cao mang tới trải
+                        nghiệm giải trí cực đã.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        Phần tai thỏ phía trước cũng được Apple tinh chỉnh thu gọn khoảng 20% so với thế hệ trước mang đến không gian hiển thị lớn hơn
+                        cho người dùng trải nghiệm.
+                    </p>
+
+                    <p style="text-align: justify;">Không chỉ mãn nhãn với màn hình Super Retina XDR, iPhone 13 Pro Max còn được trang bị công nghệ ProMotion, giúp mọi trải nghiệm cảm ứng từ vuốt, chạm, cuộn trang cho đến chơi game đều mượt mà một cách đáng kinh ngạc.</p>
+
+                    <p style="text-align: justify;">Công nghệ ProMotion cực kỳ xịn sò có khả năng tự động điều chỉnh tần số quét từ 10 - 120 Hz tùy thuộc vào tốc độ lướt và nội dung hiển thị. Nhờ đó dù có tần số làm tươi cao nhưng thời lượng pin vẫn hứa hẹn được cải thiện đáng kể.</p>
+                    <p style="text-align: justify;">
+                        Ngoài ra, độ sáng màn hình trên iPhone 13 Pro Max được tăng lên 1200 nits khi hiển thị nội dung HDR, tích hợp những tính năng bổ trợ khác như Dolby Vision, True Tone hoặc gam màu rộng P3 mang đến cho người dùng chất lượng
+                        hiển thị sắc nét và chân thực đến từng chi tiết.
+                    </p>
+
+                    
+                    <p style="text-align: justify;">
+                        Mặt trước của thiết bị được phủ một lớp Ceramic Shield độc quyền trên của hãng, với độ bền vượt trội, khả năng chống trầy xước cao giúp bảo vệ màn hình&nbsp;
+                        iPhone hiệu quả.
+                    </p>
+
+                    <h3 style="text-align: justify;">
+                        Cụm camera nâng cấp, hỗ trợ chụp ảnh, quay phim chuyên nghiệp
+                    </h3>
+                    <p style="text-align: justify;">
+                        Giống như thế hệ trước, iPhone 13 Pro Max trang bị hệ thống 3 camera sau, nay được nâng cấp toàn diện khi trang bị camera có khẩu độ và kích thước cảm biến siêu lớn, hỗ trợ ống kính len 6P đi cùng chip xử lý hình ảnh ISP mới tích hợp
+                        trên Apple A15 Bionic và thuật toán phần mềm thông minh. Giúp iPhone 13 Pro Max thu sáng tốt hơn tới 2.2 lần ở camera chính, hơn 92% ở camera góc siêu rộng để trở thành chiếc điện thoại chụp đêm xuất sắc nhất hiện nay.
+                    </p>
+
+                    <p style="text-align: justify;"> Camera góc siêu rộng
+                        của iPhone 13 Pro Max không chỉ chụp được những hình ảnh khung hình rộng mà còn có khả năng lấy nét ở khoảng cách chỉ 2 cm, hỗ trợ tính năng Photographic Styles tích hợp các bộ lọc màu thông minh có thể tăng hoặc
+                        tắt màu mà không ảnh hưởng đến tông màu da giúp người dùng người dùng thoải mái sáng tạo, chỉnh sửa ảnh trong thời gian thực theo ý thích.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        Với camera tele, tiêu cự giờ đây đã được tăng lên 77 mm tương đương zoom 3x cho khả năng phóng to hình ảnh và video gấp 3 lần nhưng vẫn giữ
+                        nguyên chất lượng.
+                    </p>
+
+                </div>
+            </div>
+            <!-- MUA ONLINE GIẢM SỐC 1.000.000₫ CÒN -->
+            <div class="col-md-5">
+                <div class="panel panel-danger text-center">
+                    <div class="panel-heading">MUA ONLINE GIẢM SỐC 1.000.000₫ CÒN</div>
+                    <div class="panel-body">35.990.000₫ *</div>
+                </div>
+
+                <div class="khuyen-mai-hb">
+                    <span class="tieu-de"><i class="fas fa-gifts"></i> Khuyến mãi đặc biệt</span>
+                    <ol>
+                        <li>
+                            Giảm giá 800,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay, Moca)
+                        </li>
+                        <li>Giảm thêm 5% khi mua cùng sản phẩm bất kỳ có giá cao hơn</li>
+                        <li>Giảm 50% giá mua gói bảo hiểm rơi vỡ 6 tháng (trị giá đến 1,000,000đ) </li>
+                        <li>Giảm 50% giá gói cước 1 năm (Vina350/Vina500) cho Sim VinaPhone trả sau (Trị giá đến 3 triệu) </li>
+                    </ol>
+                </div>
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <button type="button" class="btn btn-warning" style="width:100%;    background-color: #fb6e2e; margin-bottom: 10px;">MUA NGAY</button>
+                        <div class="col-xs-6">
+                            <button type="button" class="btn btn-primary" style="width:100%;    background-color: #2f80ed;">
+                                MUA TRẢ GÓP 0%<br>
+                                <span>Duyệt hồ sơ trong 5 phút</span>
+                            </button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button type="button" class="btn btn-primary" style="width:100%;    background-color: #2f80ed;">
+                                TRẢ GÓP 0% QUA THẺ <br>
+                                <span>Visa, Mastercard, JCB, Amex</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- form-comment -->
+                <div>
+                    <form id="algin-form">
+                        <div class="form-group">
+                            <h4><strong>Bình Luận</strong></h4> <label for="message">Message</label> <textarea name="msg" id="" msg cols="30" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group"> <label for="name">Họ Tên</label> <input type="text" name="name" id="fullname" class="form-control"> </div>
+                        <div class="form-group"> <label for="email">Email</label> <input type="text" name="email" id="email" class="form-control"> </div>
+                        <div class="form-group">
+                            <p class="text-secondary">
+                                Để đánh giá được duyệt, quý khách vui lòng tham khảo<a href="#">
+                                    Quy định duyệt đánh giá
+                                </a>
+                            </p>
+                        </div>
+                        <div class="form-inline"> <input type="checkbox" name="check" id="checkbx" class="mr-1"> <label for="subscribe">Tôi sẽ giới thiệu sản phẩm này cho bạn bè người thân</label> </div>
+                        <div class="form-group">
+                            <button type="button" id="post" class="btn btn-danger">
+                                Post
+                                Comment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- danh sách phản hồi thông tin -->
+
+                <ul class="comment">
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Ngọc</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">
+                            Lần đầu khui Seal iPhone 13Promax tại LCL Shop. Máy đẹp, không lỗi. Cảm ơn Bạn quản lý (Ms Linh) đã hỗ trợ mình mua sản phẩm này. Mình sẽ ủng hộ thêm khi có nhu cầu mua hàng. Trân trọng.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Nguyễn Quang Hải</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">
+                            Máy đẹp. Pin trâu. Dùng phải nói là max phê. :)) Dùng hàng của apple là quá chuẩn rồi
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Tun Phạm</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">
+                            Máy đẹp. Pin trâu. Dùng phải nói là max phê. :)) Dùng hàng của apple là quá chuẩn rồi
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Điền</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">
+                            Máy đẹp. Pin trâu. Dùng phải nói là max phê. :)) Dùng hàng của apple là quá chuẩn rồi
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Phan Văn Nhân</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">
+                            May mắn không cọc trước nhưng vô tình mua được máy sớm. Chất lượng Apple khỏi bàn. Nhân viên phục vụ vui vẻ, tận tình ( Quản lý và bạn Thiên bán hàng).
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Lê Tấn Khanh</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">Niceeee </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Huỳnh Lập</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question">Nhân viên tư vấn nhiệt tình tận tâm 100₫ Có mua gì sẽ ủng hộ shop trong tg tới </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Nguyễn Hữu Hiếu</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question"> Nhân viên tư vấn nhiệt tình Sản phẩm đẹp nhưng không biết thời gian dài như thế nào </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Trần Quốc Nhật Khoa</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question"> Mua máy ở 29 Tăng Nhơ Phú Q9 rất hài lòng, nhất là thái độ phục vụ của các nhân viên rất nhiệt tình và chuyên nghiệp </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a>
+                                <strong>Lê Nguyên Thế Phương</strong>
+                                <span>
+
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                    <i class="fas fa-star" style="color: orange;"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="question"> LCLshop gọi dt lên báo có ip13 pro max xanh dương 256GB chút chạy lên thì báo là còn 4 cái bán hết cho khách! thất vọng quá đang cần gấp xài! tin tưởng lcl mua rất nhiều dt ở đây rồi </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+    <script>
+        if (address_2 = localStorage.getItem('address_2_saved')) {
+            $('select[name="calc_shipping_district"] option').each(function () {
+                if ($(this).text() == address_2) {
+                    $(this).attr('selected', '')
+                }
+            })
+            $('input.billing_address_2').attr('value', address_2)
+        }
+        if (district = localStorage.getItem('district')) {
+            $('select[name="calc_shipping_district"]').html(district)
+            $('select[name="calc_shipping_district"]').on('change', function () {
+                var target = $(this).children('option:selected')
+                target.attr('selected', '')
+                $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                address_2 = target.text()
+                $('input.billing_address_2').attr('value', address_2)
+                district = $('select[name="calc_shipping_district"]').html()
+                localStorage.setItem('district', district)
+                localStorage.setItem('address_2_saved', address_2)
+            })
+        }
+        $('select[name="calc_shipping_provinces"]').each(function () {
+            var $this = $(this),
+                stc = ''
+            c.forEach(function (i, e) {
+                e += +1
+                stc += '<option value=' + e + '>' + i + '</option>'
+                $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+                if (address_1 = localStorage.getItem('address_1_saved')) {
+                    $('select[name="calc_shipping_provinces"] option').each(function () {
+                        if ($(this).text() == address_1) {
+                            $(this).attr('selected', '')
+                        }
+                    })
+                    $('input.billing_address_1').attr('value', address_1)
+                }
+                $this.on('change', function (i) {
+                    i = $this.children('option:selected').index() - 1
+                    var str = '',
+                        r = $this.val()
+                    if (r != '') {
+                        arr[i].forEach(function (el) {
+                            str += '<option value="' + el + '">' + el + '</option>'
+                            $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+                        })
+                        var address_1 = $this.children('option:selected').text()
+                        var district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('address_1_saved', address_1)
+                        localStorage.setItem('district', district)
+                        $('select[name="calc_shipping_district"]').on('change', function () {
+                            var target = $(this).children('option:selected')
+                            target.attr('selected', '')
+                            $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                            var address_2 = target.text()
+                            $('input.billing_address_2').attr('value', address_2)
+                            district = $('select[name="calc_shipping_district"]').html()
+                            localStorage.setItem('district', district)
+                            localStorage.setItem('address_2_saved', address_2)
+                        })
+                    } else {
+                        $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+                        district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('district', district)
+                        localStorage.removeItem('address_1_saved', address_1)
+                    }
+                })
+            })
+        })
+    </script>
+
+    <footer>
+        <div class="container1">
+            <div class="noi-dung about">
+                <h3>Về Chúng Tôi</h3>
+                <p>
+                    Thưa Quý khách hàng! Với tôn chỉ “Mang đến cho khách hàng không chỉ
+                    là những sản phẩm tốt, chất lượng cao, mà kèm theo đó
+                    là những dịch vụ tiện ích.”, công ty Công ty Cổ phần
+                    bán lẻ kỹ thuật số LCL đang từng bước phát triển
+                    và chiếm được lòng tin của khách hàng. Hiện tại, LCL có mạng lưới
+                    hơn 500 cửa hàng trên toàn quốc, các thế thệ nhân viên của công ty
+                    luôn giữ cho mình tinh thần khởi nghiệp mạnh mẽ, không chỉ tập trung tạo ra những giá trị lâu bền
+                    mà còn cam kết hành động đúng đắn vì lợi ích của khách hàng và đồng nghiệp.
+
+                </p>
+                <ul class="social-icon">
+                    <li>
+                        <a href="https://www.facebook.com/huuthien.nguyen.775"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100008650172158"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/LinhMin1314"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/phuloc.1212"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="noi-dung links">
+                <h3>Liên Kết</h3>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="chitietsp.html">Sản Phẩm</a></li>
+                    <li><a href="#">Giỏ Hàng</a></li>
+                    <li><a href="tintuc.html">24h Công Nghệ</a></li>
+                    <li><a href="tranglienhe/index.html">Contact</a></li>
+
+                </ul>
+            </div>
+            <div class="noi-dung contact">
+                <h3>Thông Tin Liên Hệ</h3>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <span>
+                            828 Sư Vạn Hạnh<br />
+                            Quận 10, Thành Phố Hồ Chí Minh<br />
+                            Việt Nam
+                        </span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone"></i></span>
+                        <p>
+                            <a href="#">1800 2097 (8h00 - 22h00)</a>
+                            <br />
+                            <a href="#">1800 2063 (8h00 - 21h30)</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope"></i></span>
+                        <p><a href="#">LCLShop.com.vn</a></p>
+                    </li>
+                    <li>
+                        <form class="form">
+                            <input type="email"
+                                   class="form__field"
+                                   placeholder="Đăng Ký Subscribe Email" />
+                            <button type="button" class="btn btn--primary uppercase">
+                                Gửi
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+﻿<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCLshop.com.vn/tin-tuc</title>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="tintuc.css" />
+    <style>
+        #news span {
+            font-size: 13px;
+        }
+
+        #news a {
+            color: black;
+            text-decoration: none;
+        }
+
+            #news a:hover h3,
+            #news a:hover h4,
+            #news a:hover h5 {
+                color: rgba(52, 152, 219, 1.0);
+            }
+
+        #news h5 {
+            padding: 15px 0;
+            border-bottom: 1px solid grey;
+        }
+
+        #xemnhieu {
+            background-color: white;
+        }
+
+            #xemnhieu h3 {
+                margin: 15px;
+            }
+
+            #xemnhieu .list-group li {
+                margin: 0px 10px;
+                font-size: 20px;
+            }
+
+                #xemnhieu .list-group li:hover {
+                    background-color: #ecf0f1;
+                }
+
+        #spmoi a {
+            display: inline-block;
+            margin: 20px 5px;
+        }
+
+        #spmoi h4 {
+            color: #3498db;
+        }
+
+        @media screen and (max-width: 600px) {
+            #tintuc img {
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/bf.jpg" alt=""></a>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><img style="width:100px" src="img/logo.jpg" alt=""></a></li>
+                <li id="address-form"><a href="#">Hồ Chí Minh<i class="fas fa-sort-down"></i></a></li>
+                <li><input type="text" placeholder="Bạn tìm gì..."><i class="fas fa-search"></i></li>
+                <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Giỏ hàng</button></li>
+                <li><a href="">Lịch sử<br> đơn hàng</a></li>
+                <li><a href=""></li>
+                <li><a href="tintuc.html">24h Công nghệ</a></li>
+                <li><a href="tranglienhe/index.html">Liên hệ</a></li>
+
+                <div class="address-form">
+                    <div class="address-form-content">
+                        <h2>Chọn địa chỉ nhận hàng<span id="address-close">X Đóng</span></h2>
+                        <form action="">
+                            <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao hàng.</p>
+                            <select name="calc_shipping_provinces" required="">
+                                <option value="">Tỉnh / Thành phố</option>
+                            </select>
+                            <select name="calc_shipping_district" required="">
+                                <option value="">Quận / Huyện</option>
+                            </select>
+                            <input class="billing_address_1" name="" type="hidden" value="">
+                            <input class="billing_address_2" name="" type="hidden" value="">
+                            <input type="text" placeholder="Số nhà, tên đường" />
+                            <button>XÁC NHẬN</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href="dienthoai.html"><i class="fas fa-mobile-alt"></i>Điện thoại</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-laptop"></i>Laptop</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-tablet"></i>Tablet</a></li>
+                    <li>
+                        <a href=""><i class="fas fa-headphones-alt"></i>Phụ kiện<i style="margin-left: 3px;" class="fas fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <div class="PKDD">
+                                <strong>Phụ kiện di động</strong>
+                                <ul>
+                                    <li><a href="dienthoai.html">Pin sạc dự phòng</a></li>
+                                    <li><a href="dienthoai.html">Miếng dán màn hình</a></li>
+                                    <li><a href="dienthoai.html">Sạc, cáp</a></li>
+                                    <li><a href="dienthoai.html">Ốp lưng điện thoại</a></li>
+                                    <li><a href="dienthoai.html">Ốp lưng máy tính bảng</a></li>
+                                    <li><a href="dienthoai.html">Túi đựng Airpods</a></li>
+                                    <li><a href="dienthoai.html">Phụ kiện IPad</a></li>
+                                    <li><a href="dienthoai.html">Giá đỡ laptop, điện thoại</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-cate">
+                                <div class="PKLT">
+                                    <strong>Phụ kiện Laptop</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Chuột, bàn phím</a></li>
+                                        <li><a href="dienthoai.html">Camera, Webcam</a></li>
+                                        <li><a href="dienthoai.html">Thiết bị mạng</a></li>
+                                        <li><a href="dienthoai.html">Balo, túi chống sốc</a></li>
+                                    </ul>
+                                </div>
+                                <div class="PKCH">
+                                    <strong>Thương hiệu hàng đầu</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Apple</a></li>
+                                        <li><a href="dienthoai.html">Samsung</a></li>
+                                        <li><a href="dienthoai.html">Sony</a></li>
+                                    </ul>
+                                </div>
+                                <div class="TBAT">
+                                    <strong>Thiết bị âm thanh</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Tai nghe</a></li>
+                                        <li><a href="dienthoai.html">Loa</a></li>
+                                    </ul>
+                                    <div class="TBLT">
+                                        <strong>Thiết bị lưu trữ</strong>
+                                        <ul>
+                                            <li><a href="dienthoai.html">Thẻ nhớ</a></li>
+                                            <li><a href="dienthoai.html">USB</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="PKK">
+                                        <strong>Phụ kiện khác</strong>
+                                        <ul>
+                                            <li><a href="dienthoai.html">Thiết bị thông minh</a></li>
+                                            <li><a href="dienthoai.html">Máy chiếu, TV Box</a></li>
+                                            <li><a href="dienthoai.html">Quạt mini</a></li>
+                                            <li><a href="dienthoai.html">Pin điện thoại</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                    <li><a href="dienthoai.html"><i class="fas fa-watch-fitness"></i>Đồng hồ thông minh</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-watch"></i>Đồng hồ</a></li>
+                    <li>
+                        <a href=""><i class="fas fa-desktop"></i>PC<i style="margin-left: 3px;" class="fas fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="dienthoai.html">Màn hình máy tính</a></li>
+                                <li><a href="dienthoai.html">Máy tính để bàn</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="dienthoai.html">Máy cũ giá rẻ</a></li>
+                    <li><a href="dienthoai.html">Sim, thẻ cào</a></li>
+                    <li><a href="dienthoai.html">Trả góp điện nước</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container-fluid" id="news">
+        <h1><strong> 24h Công Nghệ </strong></h1>
+        <div class="row">
+            <!-- cột 1 -->
+            <div class="col-md-8">
+
+                <!-- banner -->
+                <div class="row">
+                    <a href="baiviet.html">
+                        <div class="col-xs-8">
+                            <img src="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_4_1280x720-800-resize.jpeg">
+                            <h3>
+                                <strong>
+                                    Nghe Đồn Là: iPhone 14 series sẽ sử dụng thiết kế camera trước hình viên thuốc thay
+                                    cho
+                                    cụm tai thỏ lỗi thời (liên tục cập nhật)
+                                </strong> <span class="lesscom">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>6
+                                </span>
+                            </h3>
+                            <figure>
+                                Trong thời gian gần đây, một số thông tin đồn về chiếc smartphone có thể ra mắt trong năm 2022 của Apple, tạm gọi là iPhone 14 (iPhone 2022) đã bắt đầu xuất hiện. Liệu iPhone 14 có gì mới? Cấu hình iPhone 14 thế nào? iPhone 14 giá bao nhiêu? iPhone 14
+                                khi nào ra mắt? iPhone 14 concept nào đã xuất hiện?
+                            </figure>
+
+                        </div>
+                    </a>
+                    <div class="col-xs-4">
+                        <a href="baiviet.html">
+                            <img src="https://cdn.tgdd.vn/Files/2021/10/27/1393968/bphone-b86_1280x902-800-resize.jpg">
+                            <h4>
+                                <strong>
+                                    Nghe Đồn Là: Bphone A60 có thiết kế không đổi, ra mắt vào tháng 12 và...
+                                </strong>
+                            </h4>
+                        </a>
+
+                        <hr class="d-sm-none" color="black " />
+                        <a href="baiviet.html">
+                            <h5>
+                                Galaxy Z Flip3 có mấy màu? Mời bạn xem qua tất cả màu sắc của máy, rất nhiều nên từ từ mà lựa nha!
+                            </h5>
+                        </a>
+                        <a href="baiviet.html">
+                            <h5>
+                                Xiaomi chính thức mang Redmi Watch 2 Lite đến tay người dùng Việt: Nổi bật với nhiều tính năng hữu ích cùng giá bán tốt
+                            </h5>
+                        </a>
+
+                        <a href="baiviet.html">
+                            <h5>
+                                Philips ra mắt điện thoại mới, giá chưa tới 3 triệu đồng mà có màn hình to, pin khá tốt và có Dịch vụ đa phương tiện từ Huawei
+                            </h5>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- tin tức -->
+                <div class="container-fluid well" id="tintuc">
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/07/1402999/1_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Đã có mặt trên bàn đại tiệc sale ngày đẹp, iPhone 13 mới ra mắt hiện có ưu
+                                        đãi gì mà thơm thế? Click xem ngay
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/07/1403111/gia-ban-12_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Dự đoán giá bán OPPO Find X4 Pro: Nằm ở phân khúc flagship nhưng rất hợp lý,
+                                        đi kèm với nhiều nâng cấp đáng giá
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/08/1403294/goo1_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Một năm đầy biến động do đại dịch COVID-19, người Việt 'Google' gì nhiều
+                                        nhất trong năm 2021?
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/08/1403285/co-can-doi-the-atm-gan-chip-khong_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Không bắt buộc nhưng tại sao vẫn nên làm thẻ ATM gắn chip trước 31/12? Cách
+                                        đổi thẻ ATM gắn chip nhanh nhất
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/11/24/1400101/ghimungdung5_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Dự đoán giá bán OPPO Find X4 Pro: Nằm ở phân khúc flagship nhưng rất hợp lý,
+                                        đi kèm với nhiều nâng cấp đáng giá
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/09/25/1385440/galaxy-a52s-5g-thong-so-camera-_1542x1080-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Đánh giá camera Samsung Galaxy A52s 5G: 4 camera cho chất ảnh sắc nét, hỗ
+                                        trợ quay video chống rung OIS xịn sò
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403429/yifbjrdfcqbxsv7pb7tjxd_1200x675-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3><strong>Nghe Đồn Là: OnePlus 10 Pro ra mắt tháng 3 năm 2022, cấu hình chip Snapdragon 8 Gen 1, sạc nhanh 125 W (liên tục cập nhật)</strong></h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403346/tai-sao-iphone-khong-ket-noi-duoc-tai-nghe_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        Tại sao iPhone không kết nối được tai nghe? Giải đáp giúp bạn nguyên nhân và
+                                        8 cách khắc phục cực đơn giản
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row ">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Files/2021/11/15/1398144/h2_1280x720-800-resize.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h3>
+                                    <strong>
+                                        TOP 5 điện thoại có bộ nhớ trong 64 GB đáng mua tại TGDĐ, nổi bật trong tầm
+                                        giá dưới 4 triệu với màn hình lớn và pin trâu
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <!-- cột 2-->
+            <div class="col-md-4" id="xemnhieu">
+
+                <!-- xem nhiều -->
+                <h3><strong>Xem nhiều </strong></h3>
+                <a href="baiviet.html">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-success">
+                            Top phần mềm kiểm tra ổ cứng chất lượng nhất
+                        </li>
+                        <li class="list-group-item list-group-item-info">Đây là những phần mềm đóng băng ổ cứng máy tính hiệu quả nhất mà bạn nên dùng...</li>
+                        <li class="list-group-item list-group-item-warning"> 5 smartphone bán chạy nhất FPT Shop tháng 11/2021: Sự xuất sắc...</li>
+                        <li class="list-group-item list-group-item-danger"> Apple phát hành iOS 15.2 và iPadOS 15.2 beta 4 để sửa các lỗi còn tồn đọng...</li>
+                        <li class="list-group-item list-group-item-default"> Apple giảm sản xuất dòng iPhone 13 do khủng hoảng chip</li>
+                    </ul>
+                </a>
+
+
+                <!-- bài viet sp moi -->
+                <div class="container-fluid " id="spmoi">
+                    <h4><strong>BÀI VIẾT SẢN PHẨM MỚI</strong></h4>
+                    <a href="baiviet.html">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Products/Images/42/247507/samsung-galaxy-a52s-5g-mint-600x600.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h4>Samsung Galaxy A52s 5G</h4>
+                                <p>10.690.000₫</p>
+                                <label>57 bài viết</label>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Products/Images/42/248100/oneplus-10-pro-400x400.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h4>OnePlus 10 Pro</h4>
+                                <p>Tin đồn</p>
+                                <label>3 bài viết</label>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h4>iPhone 13</h4>
+                                <p>24.490.000₫</p>
+                                <label>177 bài viết</label>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="baiviet.html">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img src="https://cdn.tgdd.vn/Products/Images/42/247281/nokia-g50-1-400x400.jpg" alt="">
+                            </div>
+                            <div class="col-xs-8">
+                                <h4>Nokia G50</h4>
+                                <p>Đã ra mắt</p>
+                                <label>23 bài viết</label>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- khuyến mãi -->
+                    <h4><strong>KHUYẾN MÃI</strong></h4>
+                    <a href="baiviet.html">
+                        <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403517/vivo-v21-5g_1280x720-800-resize.jpg" alt="">
+                        <h4 style="color: black;">
+                            <strong>
+                                Giảm tiền trăm 'ngon lành cành đào' ngày hội siêu sale 12/12, giá
+                                Vivo V21 5G hiện nay đang quá tốt để sắm về
+                            </strong>
+                        </h4>
+                        <hr class="d-sm-none" />
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403411/realme-8-pro_1280x720-800-resize.png" alt="">
+                                <p>Gia nhập đường đua siêu sale ngày đẹp: Điện thoại Realme giảm ngon nên giá đang siêu tốt, lại còn được trả góp 0% </p>
+                            </div>
+                            <div class="col-xs-6">
+                                <img src="https://cdn.tgdd.vn/Files/2021/11/29/1401211/iphone13-ght-2_1280x720-800-resize.jpg" alt="">
+                                <p>Deal ngon hiếm có khó tìm: iPhone 13 sale siêu khủng dịp 12/12, mức giảm lớn đến 2.5 triệu đồng quá đáng mua </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403526/1_1280x720-800-resize.jpg" alt="">
+                                <p>Săn sale ngày đẹp 12/12: Chọn ngay loạt điện thoại Samsung giảm lớn chấn động, giá về tay không thể nào hấp dẫn hơn </p>
+                            </div>
+                            <div class="col-xs-6">
+                                <img src="https://cdn.tgdd.vn/Files/2021/06/09/1358854/1-8-1vt-1_800x450.jpg" alt="">
+                                <p>Duy nhất ngày 10/12: Nạp thẻ Viettel nhận ngay khuyến mãi 20% giá trị thẻ nạp, dễ mua dễ sử dụng lại siêu tiết kiệm </p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+    <script>
+        if (address_2 = localStorage.getItem('address_2_saved')) {
+            $('select[name="calc_shipping_district"] option').each(function () {
+                if ($(this).text() == address_2) {
+                    $(this).attr('selected', '')
+                }
+            })
+            $('input.billing_address_2').attr('value', address_2)
+        }
+        if (district = localStorage.getItem('district')) {
+            $('select[name="calc_shipping_district"]').html(district)
+            $('select[name="calc_shipping_district"]').on('change', function () {
+                var target = $(this).children('option:selected')
+                target.attr('selected', '')
+                $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                address_2 = target.text()
+                $('input.billing_address_2').attr('value', address_2)
+                district = $('select[name="calc_shipping_district"]').html()
+                localStorage.setItem('district', district)
+                localStorage.setItem('address_2_saved', address_2)
+            })
+        }
+        $('select[name="calc_shipping_provinces"]').each(function () {
+            var $this = $(this),
+                stc = ''
+            c.forEach(function (i, e) {
+                e += +1
+                stc += '<option value=' + e + '>' + i + '</option>'
+                $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+                if (address_1 = localStorage.getItem('address_1_saved')) {
+                    $('select[name="calc_shipping_provinces"] option').each(function () {
+                        if ($(this).text() == address_1) {
+                            $(this).attr('selected', '')
+                        }
+                    })
+                    $('input.billing_address_1').attr('value', address_1)
+                }
+                $this.on('change', function (i) {
+                    i = $this.children('option:selected').index() - 1
+                    var str = '',
+                        r = $this.val()
+                    if (r != '') {
+                        arr[i].forEach(function (el) {
+                            str += '<option value="' + el + '">' + el + '</option>'
+                            $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+                        })
+                        var address_1 = $this.children('option:selected').text()
+                        var district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('address_1_saved', address_1)
+                        localStorage.setItem('district', district)
+                        $('select[name="calc_shipping_district"]').on('change', function () {
+                            var target = $(this).children('option:selected')
+                            target.attr('selected', '')
+                            $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                            var address_2 = target.text()
+                            $('input.billing_address_2').attr('value', address_2)
+                            district = $('select[name="calc_shipping_district"]').html()
+                            localStorage.setItem('district', district)
+                            localStorage.setItem('address_2_saved', address_2)
+                        })
+                    } else {
+                        $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+                        district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('district', district)
+                        localStorage.removeItem('address_1_saved', address_1)
+                    }
+                })
+            })
+        })
+    </script>
+          
+    <footer>
+        <div class="container1">
+            <div class="noi-dung about">
+                <h3>Về Chúng Tôi</h3>
+                <p>
+                    Thưa Quý khách hàng! Với tôn chỉ “Mang đến cho khách hàng không chỉ
+                    là những sản phẩm tốt, chất lượng cao, mà kèm theo đó
+                    là những dịch vụ tiện ích.”, công ty Công ty Cổ phần
+                    bán lẻ kỹ thuật số LCL đang từng bước phát triển
+                    và chiếm được lòng tin của khách hàng. Hiện tại, LCL có mạng lưới
+                    hơn 500 cửa hàng trên toàn quốc, các thế thệ nhân viên của công ty
+                    luôn giữ cho mình tinh thần khởi nghiệp mạnh mẽ, không chỉ tập trung tạo ra những giá trị lâu bền
+                    mà còn cam kết hành động đúng đắn vì lợi ích của khách hàng và đồng nghiệp.
+
+                </p>
+                <ul class="social-icon">
+                    <li>
+                        <a href="https://www.facebook.com/huuthien.nguyen.775"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100008650172158"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/LinhMin1314"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/phuloc.1212"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="noi-dung links">
+                <h3>Liên Kết</h3>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="chitietsp.html">Sản Phẩm</a></li>
+                    <li><a href="#">Giỏ Hàng</a></li>
+                    <li><a href="tintuc.html">24h Công Nghệ</a></li>
+                    <li><a href="tranglienhe/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="noi-dung contact">
+                <h3>Thông Tin Liên Hệ</h3>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <span>
+                            828 Sư Vạn Hạnh<br />
+                            Quận 10, Thành Phố Hồ Chí Minh<br />
+                            Việt Nam
+                        </span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone"></i></span>
+                        <p>
+                            <a href="#">1800 2097 (8h00 - 22h00)</a>
+                            <br />
+                            <a href="#">1800 2063 (8h00 - 21h30)</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope"></i></span>
+                        <p><a href="#">LCLShop.com.vn</a></p>
+                    </li>
+                    <li>
+                        <form class="form">
+                            <input type="email"
+                                   class="form__field"
+                                   placeholder="Đăng Ký Subscribe Email" />
+                            <button type="button" class="btn btn--primary uppercase">
+                                Gửi
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js "></script>
+    <script src="script.js "></script>
+</body>
+
+</html>

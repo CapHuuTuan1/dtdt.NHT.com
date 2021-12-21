@@ -1,0 +1,757 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Bài Viết</title>
+    
+    <style>
+        /* banner */
+
+        #banner {
+            margin-top: 50px;
+            background-image: url('https://cdn.tgdd.vn/Files/2021/04/15/1343505/maxresdefault_1280x720.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 480px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .banner-content h1 {
+            background-color: rgba(0, 0, 0, 0.2);
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 55px;
+            color: #fff;
+            width: 800px;
+            margin: auto;
+            position: absolute;
+            left: 20%;
+            bottom: 50px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 600;
+        }
+        /* nội dung bài viết */
+
+        #baiviet {
+            font-size: 20px;
+            background-color: white;
+            padding: 0 50px;
+        }
+
+            #baiviet img {
+                width: 100%
+            }
+        /* sản phẩm  */
+
+        #new2021 {
+            margin: 5px 0;
+            padding: 20px;
+            border: 1px solid rgba(236, 240, 241, 1.0);
+        }
+
+            #new2021 h6 {
+                color: red;
+            }
+
+            #new2021 span {
+                font-size: 13px;
+                display: block;
+                line-height: 1.5;
+                color: black;
+                margin-bottom: 5px;
+            }
+
+        .viewdetail {
+            background-color: coral;
+            border: 1px solid #d97f00;
+            padding: 5px 15px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 4px;
+            background: -webkit-linear-gradient(top, #f89406, #f76b1c);
+        }
+        /* bài viết liên quan */
+
+        .lienquan p {
+            color: rgba(44, 62, 80, 1.0);
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: 800px) {
+            #banner {
+                height: 260px;
+                width: auto;
+                position: relative;
+            }
+
+            .banner-content h1 {
+                position: absolute;
+                left: 10%;
+                bottom: 10%;
+                width: 400px;
+                font-size: 22px;
+                line-height: 30px;
+            }
+
+            #new2021 img {
+                position: relative;
+                top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/bf.jpg" alt=""></a>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><img style="width:100px" src="img/logo.jpg" alt=""></a></li>
+                <li id="address-form"><a href="#">Hồ Chí Minh<i class="fas fa-sort-down"></i></a></li>
+                <li><input type="text" placeholder="Bạn tìm gì..."><i class="fas fa-search"></i></li>
+                <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Giỏ hàng</button></li>
+                <li><a href="">Lịch sử<br> đơn hàng</a></li>
+                <li><a href=""></a></li>
+                <li><a href="tintuc.html">24h Công nghệ</a></li>
+                <li><a href="tranglienhe/index.html">Liên hệ</a></li>
+
+                <div class="address-form">
+                    <div class="address-form-content">
+                        <h2>Chọn địa chỉ nhận hàng<span id="address-close">X Đóng</span></h2>
+                        <form action="">
+                            <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao hàng.</p>
+                            <select name="calc_shipping_provinces" required="">
+                                <option value="">Tỉnh / Thành phố</option>
+                            </select>
+                            <select name="calc_shipping_district" required="">
+                                <option value="">Quận / Huyện</option>
+                            </select>
+                            <input class="billing_address_1" name="" type="hidden" value="">
+                            <input class="billing_address_2" name="" type="hidden" value="">
+                            <input type="text" placeholder="Số nhà, tên đường" />
+                            <button>XÁC NHẬN</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href="dienthoai.html"><i class="fas fa-mobile-alt"></i>Điện thoại</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-laptop"></i>Laptop</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-tablet"></i>Tablet</a></li>
+                    <li>
+                        <a href=""><i class="fas fa-headphones-alt"></i>Phụ kiện<i style="margin-left: 3px;" class="fas fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <div class="PKDD">
+                                <strong>Phụ kiện di động</strong>
+                                <ul>
+                                    <li><a href="dienthoai.html">Pin sạc dự phòng</a></li>
+                                    <li><a href="dienthoai.html">Miếng dán màn hình</a></li>
+                                    <li><a href="dienthoai.html">Sạc, cáp</a></li>
+                                    <li><a href="dienthoai.html">Ốp lưng điện thoại</a></li>
+                                    <li><a href="dienthoai.html">Ốp lưng máy tính bảng</a></li>
+                                    <li><a href="dienthoai.html">Túi đựng Airpods</a></li>
+                                    <li><a href="dienthoai.html">Phụ kiện IPad</a></li>
+                                    <li><a href="dienthoai.html">Giá đỡ laptop, điện thoại</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-cate">
+                                <div class="PKLT">
+                                    <strong>Phụ kiện Laptop</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Chuột, bàn phím</a></li>
+                                        <li><a href="dienthoai.html">Camera, Webcam</a></li>
+                                        <li><a href="dienthoai.html">Thiết bị mạng</a></li>
+                                        <li><a href="dienthoai.html">Balo, túi chống sốc</a></li>
+                                    </ul>
+                                </div>
+                                <div class="PKCH">
+                                    <strong>Thương hiệu hàng đầu</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Apple</a></li>
+                                        <li><a href="dienthoai.html">Samsung</a></li>
+                                        <li><a href="dienthoai.html">Sony</a></li>
+                                    </ul>
+                                </div>
+                                <div class="TBAT">
+                                    <strong>Thiết bị âm thanh</strong>
+                                    <ul>
+                                        <li><a href="dienthoai.html">Tai nghe</a></li>
+                                        <li><a href="dienthoai.html">Loa</a></li>
+                                    </ul>
+                                    <div class="TBLT">
+                                        <strong>Thiết bị lưu trữ</strong>
+                                        <ul>
+                                            <li><a href="dienthoai.html">Thẻ nhớ</a></li>
+                                            <li><a href="dienthoai.html">USB</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="PKK">
+                                        <strong>Phụ kiện khác</strong>
+                                        <ul>
+                                            <li><a href="dienthoai.html">Thiết bị thông minh</a></li>
+                                            <li><a href="dienthoai.html">Máy chiếu, TV Box</a></li>
+                                            <li><a href="dienthoai.html">Quạt mini</a></li>
+                                            <li><a href="dienthoai.html">Pin điện thoại</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                    <li><a href="dienthoai.html"><i class="fas fa-watch-fitness"></i>Đồng hồ thông minh</a></li>
+                    <li><a href="dienthoai.html"><i class="fas fa-watch"></i>Đồng hồ</a></li>
+                    <li>
+                        <a href=""><i class="fas fa-desktop"></i>PC<i style="margin-left: 3px;" class="fas fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="dienthoai.html">Màn hình máy tính</a></li>
+                                <li><a href="dienthoai.html">Máy tính để bàn</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="dienthoai.html">Máy cũ giá rẻ</a></li>
+                    <li><a href="dienthoai.html">Sim, thẻ cào</a></li>
+                    <li><a href="dienthoai.html">Trả góp điện nước</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="banner">
+        <div class="banner-content">
+            <h1>
+                <strong>
+                    Nghe Đồn Là: iPhone 14 series sẽ sử dụng thiết kế camera trước hình viên thuốc thay cho cụm tai
+                    thỏ lỗi thời (liên tục cập nhật)
+                </strong>
+            </h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="baiviet">
+                <!-- nội dung bài viết -->
+                <article class="artrating">
+
+                    <p>
+                        <em>
+                            Lưu ý: Bài viết sẽ được cập nhật liên tục cho đến khi iPhone 14 ra mắt chính thức. Các bạn
+                            nhớ theo dõi bài viết mỗi tuần nha!
+                        </em>
+                    </p>
+                    <p>
+                        Xem thêm:&nbsp;<a href="baiviet.html" target="_blank" title="Đánh giá iPhone 13 Pro: Camera đậm chất 'Pro', chip Apple A15 mạnh mẽ" type="Đánh giá iPhone 13 Pro: Camera đậm chất 'Pro', chip Apple A15 mạnh mẽ">
+                            Đánh giá iPhone
+                            13 Pro: Camera đậm chất 'Pro', chip Apple A15 mạnh mẽ
+                        </a>
+                    </p>
+                    <h3>
+                        <strong>iPhone 14 series sẽ sử dụng cụm camera hình viên thuốc&nbsp;(cập nhật: 08/12)</strong>
+                    </h3>
+                    <p>
+                        Trong thời gian gần đây, ngày càng có nhiều tin đồn về những chiếc iPhone thế hệ tiếp theo sẽ được ra mắt. Đặc biệt là iPhone 14 series có thể không còn sử dụng tai thỏ nữa mà thay vào đó sẽ là thiết kế kiểu viên thuốc giống như nhiều
+                        smartphone Android. Chỉ mới đây thôi, tài khoản của&nbsp;<a href="baiviet.html">@aaple_lab</a> đã chia sẻ hình ảnh mới nhất của iPhone 14 series dựa theo những tin đồn rò rỉ mới nhất.
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 Series sẽ sở hữu thiết kế màn hình có camera hình viên thuốc." data-original="https://cdn.tgdd.vn/Files/2021/04/15/1343505/iphone-14-ro-ri_1280x1508-800-resize.png" title="iPhone 14 Series sẽ sở hữu thiết kế màn hình có camera hình viên thuốc."
+                             class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/04/15/1343505/iphone-14-ro-ri_1280x1508-800-resize.png">
+                    </div>
+                    <div class="captionnews">iPhone 14 series sẽ sở hữu thiết kế màn hình có camera hình viên thuốc. Nguồn: Applehub.</div>
+                    <p>
+                        Chúng ta đều thấy với thiết kế này, trông iPhone series thế hệ mới trông đẹp mắt và gọn gàng hơn rất nhiều so với kiểu tai thỏ truyền thống. Rất có thể Apple đã tìm được cách tối ưu để làm nhỏ lại phần cảm biến FaceID cũng như camera
+                        để đưa vào hình viên thuốc ở mặt trước.&nbsp;
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 series" data-original="https://cdn.tgdd.vn/Files/2021/04/15/1343505/ff_1rhjwqaqe0q--_4096x2300-800-resize.jpg" title="iPhone 14 series" class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/04/15/1343505/ff_1rhjwqaqe0q--_4096x2300-800-resize.jpg">
+                    </div>
+                    <div class="captionnews">
+                        iPhone 14 series sẽ không còn sử dụng thiết kế tai thỏ nữa. Nguồn: Aaple_lab.
+                    </div>
+                    <p>
+                        Có lẽ việc làm nhỏ tai thỏ trên thế hệ iPhone 13 series vẫn không thể đủ làm hài lòng đa số người dùng chúng ta. Bởi tính ra thì kiểu thiết kế này đã kéo dài 4 năm từ thời điểm iPhone X ra mắt rồi, cũng đã đến lúc mà Apple cần làm
+                        gì đó để thay đổi, để thể hiện sự sáng tạo của mình. Có lẽ không chỉ mình mà rất nhiều bạn đều mong chờ sự thay đổi mới này từ Apple.
+                    </p>
+                    <h3><strong>iPhone 14 Pro và iPhone 14 Pro Max sẽ sử dụng cổng USB Type-C&nbsp;</strong></h3>
+                    <p>
+                        Các báo cáo gần đây tiết lộ dòng iPhone 14 của Apple sẽ ra mắt vào tháng 9 năm 2022 gồm các mẫu: iPhone 14 6.1 inch, iPhone 14 Pro 6.1 inch, iPhone 14 Max 6.7 inch và iPhone 14 Pro Max 6.7 inch. Theo iDrop News, gã khổng lồ xứ Cupertinho
+                        đang cân nhắc thay thế cổng Lightning bằng cổng&nbsp;USB-C trên iPhone 14 Pro và iPhone 14 Pro Max. Cũng theo nguồn tin trên, có 3 lý do chính khiến Apple đưa ra quyết định này thay vì tiếp tục sử dụng cổng Lightning.
+                    </p>
+                    <div class="imgwrap"><img alt="Apple chuyển qua cổng Type-C" data-original="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_2_1280x720-800-resize.jpeg" src="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_2_1280x720-800-resize.jpeg" title="Apple chuyển qua cổng Type-C"></div>
+                    <div class="captionnews">
+                        Apple liệu có chuyển sang sử dụng cổng USB-C cho iPhone? Nguồn: Tailosive Tech.
+                    </div>
+                    <p>
+                        Đầu tiên, tính năng ProRes có trên iPhone 13 Pro và 13 Pro Max và cũng sẽ xuất hiện trên iPhone 14 Pro và iPhone 14 Pro Max tốn rất nhiều dung lượng. Khi chuyển định dạng file này từ iPhone sang PC tiêu tốn rất nhiều thời gian vì cổng
+                        Lightning trên iPhone chỉ là chuẩn kết nối&nbsp;USB 2.0 đã rất cũ và chậm hơn nhiều so với cổng USB-C. Ví dụ, một file video 4K 720GB chưa qua chỉnh sửa phải mất đến 3 tiếng 45 phút để chuyển từ dòng iPhone 13 Pro sang PC. Cũng
+                        một tệp trên nhưng được xuất bằng USB-C trên iPad Pro 2021, người dùng chỉ mất chưa tới 3 phút để truyền dữ liệu.
+                    </p>
+                    <div class="imgwrap"><img alt="Lí do Apple chuyển qua Type-C" data-original="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_3_1280x720-800-resize.jpeg" title="Lí do Apple chuyển qua Type-C" class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_3_1280x720-800-resize.jpeg"></div>
+                    <div class="captionnews">
+                        Lý do khiến Apple chuyển qua dùng Type-C trên iPhone là gì? Nguồn: Saran Byte
+                    </div>
+                    <p>
+                        Lý do thứ hai cho quyết định này có thể là do đề xuất gần đây của Liên minh Châu Âu (EU) về việc đưa USB-C trở thành tiêu chuẩn duy nhất để sạc có dây trên smartphone. Nếu các công ty không tuân thủ quy định mới sẽ phải chịu các khoảng
+                        tiền phạt. Để tránh án phạt trên, Apple có thể đã quyết định chuyển sang USB-C cho các mẫu iPhone 14 Pro.
+                    </p>
+                    <div class="imgwrap"><img alt="Thiết kế render iPhone 14 Pro Max" data-original="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_4_1280x720-800-resize.jpeg" title="Thiết kế render iPhone 14 Pro Max" class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/11/19/1399050/iphonec_4_1280x720-800-resize.jpeg"></div>
+                    <div class="captionnews">
+                        Dòng iPhone 14 dự kiến có nhiều thay đổi so với dòng iPhone 13. Nguồn: Mac Rumors.
+                    </div>
+                    <p>
+                        Lý do cuối cùng, việc chuyển qua USB-C nhằm bảo vệ môi trường. Trước đây, Apple đã quyết định loại bỏ bộ sạc trên iPhone kể từ dòng iPhone 11. Công ty tin rằng việc không tặng kèm củ sạc theo máy sẽ giúp cắt giảm lượng khí thải carbon.
+                        Việc sử dụng USB-C sẽ giúp người dùng dễ dàng sạc iPhone của mình bằng các bộ sạc của iPad, Macbook và nhiều thiết bị khác.
+                    </p>
+                    <p>
+                        Bài viết chi tiết: <a href="baiviet.html" target="_blank" title="Apple sẽ dùng cổng USB-C cho iPhone 14 Pro và iPhone 14 Pro Max?" type="Apple sẽ dùng cổng USB-C cho iPhone 14 Pro và iPhone 14 Pro Max?">
+                            Apple sẽ dùng cổng
+                            USB-C cho iPhone 14 Pro và iPhone 14 Pro Max?
+                        </a>
+                    </p>
+                    <h3><strong>iPhone 14 Series sẽ hỗ trợ Wi-Fi 6E cực kỳ xịn sò</strong></h3>
+                    <p>
+                        Vào hôm 18/11, báo cáo mới nhất đến từ nhà phân tích nổi tiếng Ming-Chi Kuo đã phác thảo việc sử dụng Wi-Fi 6E trên dòng iPhone 14 và kính thực tế ảo Apple VR sắp ra mắt. Cụ thể, dòng iPhone 14 và Apple VR sẽ giúp thúc đẩy nhiều đối
+                        thủ cạnh tranh hướng tới việc áp dụng chuẩn Wi-Fi 6E vào năm 2022. Dành cho những bạn nào chưa biết thì Wi-Fi 6E cho phép chúng ta kết nối trên băng tần 6 GHz với tốc độ cao hơn, điều này sẽ rất cần thiết cho trải nghiệm người
+                        dùng đối với kính VR của Apple.
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 và kính thực tế ảo Apple VR sẽ hỗ trợ chuẩn Wi-Fi 6E siêu tốc, nhưng có vẻ như nhà Táo đã đi sau đối thủ" data-original="https://cdn.tgdd.vn/Files/2021/11/18/1398697/wi-fi-6-1_1280x720-800-resize.jpg" title="iPhone 14 và kính thực tế ảo Apple VR sẽ hỗ trợ chuẩn Wi-Fi 6E siêu tốc, nhưng có vẻ như nhà Táo đã đi sau đối thủ"
+                             class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/11/18/1398697/wi-fi-6-1_1280x720-800-resize.jpg">
+                    </div>
+                    <div class="captionnews">Ảnh minh họa (Nguồn: MacHash)</div>
+                    <p>
+                        Tính đến thời điểm hiện tại thì không có nhiều thiết bị hỗ trợ Wi-Fi 6E. Trước đây, người ta mong đợi rằng dòng iPhone 13 sẽ áp dụng tiêu chuẩn Wi-Fi 6E nhưng điều đó đã không xảy ra và máy chỉ hỗ trợ Wi-Fi 6 mà thôi. Trong thế giới
+                        smartphone Android, các thiết bị như <a href="https://www.thegioididong.com/dtdd/google-pixel-6" target="_blank" title="Pixel 6" type="Pixel 6">Pixel 6</a>, <a href="baiviet.html" target="_blank" title="Pixel 6 Pro">Pixel 6 Pro</a>,
+                        <a href="produce.html" target="_blank" title="Galaxy S21 Ultra 5G">Galaxy S21 Ultra</a>, <a href="produce.html" target="_blank" title="Chi tiết Samsung Galaxy Z Fold3 5G">
+                            Galaxy Z
+                            Fold3
+                        </a>,
+                        <a href="produce.html" target="_blank" title="Xiaomi Mi 11 Ultra">Xiaomi Mi 11 Ultra</a>, <a href="produce.html" target="_blank" title="Asus ROG Phone 5">ASUS ROG Phone 5</a>,
+                        <a href="produce.html" target="_blank" title="Zenfone 8">Zenfone 8</a> và một số thiết bị khác đã hỗ trợ Wi-Fi 6E. Do đó, mình nghĩ việc Apple đang phát triển Wi-Fi 6E cho iPhone 14 Series là một bước đi hoàn toàn đúng đắn.
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 và kính thực tế ảo Apple VR sẽ hỗ trợ chuẩn Wi-Fi 6E siêu tốc, nhưng có vẻ như nhà Táo đã đi sau đối thủ" data-original="https://cdn.tgdd.vn/Files/2021/11/18/1398697/wi-fi-6-2_1280x723-800-resize.jpg" title="iPhone 14 và kính thực tế ảo Apple VR sẽ hỗ trợ chuẩn Wi-Fi 6E siêu tốc, nhưng có vẻ như nhà Táo đã đi sau đối thủ"
+                             class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/11/18/1398697/wi-fi-6-2_1280x723-800-resize.jpg">
+                    </div>
+
+                    <div class="captionnews">
+                        Dòng iPhone 14 dự kiến có nhiều thay đổi so với dòng iPhone 13. Nguồn: Mac Rumors.
+                    </div>
+                    <p>
+                        Lý do cuối cùng, việc chuyển qua USB-C nhằm bảo vệ môi trường. Trước đây, Apple đã quyết định loại bỏ bộ sạc trên iPhone kể từ dòng iPhone 11. Công ty tin rằng việc không tặng kèm củ sạc theo máy sẽ giúp cắt giảm lượng khí thải carbon.
+                        Việc sử dụng USB-C sẽ giúp người dùng dễ dàng sạc iPhone của mình bằng các bộ sạc của iPad, Macbook và nhiều thiết bị khác.
+                    </p>
+                    <p>
+                        Bài viết chi tiết: <a href="https://www.thegioididong.com/tin-tuc/ro-len-tin-don-apple-se-tu-bo-cong-lightning-1399050" target="_blank" title="Apple sẽ dùng cổng USB-C cho iPhone 14 Pro và iPhone 14 Pro Max?" type="Apple sẽ dùng cổng USB-C cho iPhone 14 Pro và iPhone 14 Pro Max?">
+                            Apple sẽ dùng cổng
+                            USB-C cho iPhone 14 Pro và iPhone 14 Pro Max?
+                        </a>
+                    </p>
+                    <h3><strong>iPhone 14 Series sẽ hỗ trợ Wi-Fi 6E cực kỳ xịn sò</strong></h3>
+                    <p>
+                        Vào hôm 18/11, báo cáo mới nhất đến từ nhà phân tích nổi tiếng Ming-Chi Kuo đã phác thảo việc sử dụng Wi-Fi 6E trên dòng iPhone 14 và kính thực tế ảo Apple VR sắp ra mắt. Cụ thể, dòng iPhone 14 và Apple VR sẽ giúp thúc đẩy nhiều đối
+                        thủ cạnh tranh hướng tới việc áp dụng chuẩn Wi-Fi 6E vào năm 2022. Dành cho những bạn nào chưa biết thì Wi-Fi 6E cho phép chúng ta kết nối trên băng tần 6 GHz với tốc độ cao hơn, điều này sẽ rất cần thiết cho trải nghiệm người
+                        dùng đối với kính VR của Apple.
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 và kính thực tế ảo Apple VR sẽ hỗ trợ chuẩn Wi-Fi 6E siêu tốc, nhưng có vẻ như nhà Táo đã đi sau đối thủ" data-original="https://cdn.tgdd.vn/Files/2021/11/18/1398697/wi-fi-6-1_1280x720-800-resize.jpg" title="iPhone 14 và kính thực tế ảo Apple VR sẽ hỗ trợ chuẩn Wi-Fi 6E siêu tốc, nhưng có vẻ như nhà Táo đã đi sau đối thủ"
+                             class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/11/18/1398697/wi-fi-6-1_1280x720-800-resize.jpg">
+                    </div>
+                    <div class="captionnews">Ảnh minh họa (Nguồn: MacHash)</div>
+                    <p>
+                        Tính đến thời điểm hiện tại thì không có nhiều thiết bị hỗ trợ Wi-Fi 6E. Trước đây, người ta mong đợi rằng dòng iPhone 13 sẽ áp dụng tiêu chuẩn Wi-Fi 6E nhưng điều đó đã không xảy ra và máy chỉ hỗ trợ Wi-Fi 6 mà thôi. Trong thế giới
+                        smartphone Android, các thiết bị như <a href="baiviet.html" target="_blank" title="Pixel 6" type="Pixel 6">Pixel 6</a>, <a href="baiviet.html" target="_blank" title="Pixel 6 Pro">
+                            Pixel
+                            6 Pro
+                        </a>
+                        <strong>iPhone 14 giá bao nhiêu?</strong>
+                        <h3><strong>iPhone 14 giá bao nhiêu?</strong></h3>
+                    <p>
+                        Mặc dù chưa có tên gọi của những chiếc iPhone 14 nhưng giá bán của em nó đã dần hé lộ phần nào. Theo đó, năm 2022 sẽ có tới 4 mẫu iPhone được ra mắt, trong đó có 2 mẫu có kích thước là 6.1 inch và 2 mẫu có kích thước là 6.7 inch.
+                        Ở mỗi kích thước này chúng ta sẽ có 1 mẫu smartphone cấp thấp có giá rẻ hơn, bị cắt giảm 1 vài chức năng mới nhất so với mẫu smartphone cao cấp có giá mắc hơn.
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 12 Pro Max" data-original="https://cdn.tgdd.vn/Files/2021/04/28/1347011/iphone-12-pro-max-hieu-nang_800x450.png" class=" lazyloaded" src="https://cdn.tgdd.vn/Files/2021/04/28/1347011/iphone-12-pro-max-hieu-nang_800x450.png">
+                    </div>
+                    <div class="captionnews">Giá của iPhone 14 có kích thước màn hình 6.7 inch sẽ rẻ hơn chiếc iPhone 12 Pro Max có kích thước màn hình tương tự. </div>
+                    <p>
+                        Theo dự đoán từ chuyên gia Ming-Chi Kuo, ông cho rằng giá của chiếc iPhone 14 có kích thước 6.7 inch cấp thấp khoảng dưới 900$ (khoảng 20.7 triệu đồng) rẻ hơn mức giá&nbsp;1.099$ (khoảng 25.3 triệu đồng) của chiếc iPhone 12 Pro
+                        Max có kích thước màn hình tương tự. Ở thời điểm hiện tại vẫn khá khó để đánh giá mức giá trên có hợp lý hay không bởi chúng ta vẫn chưa biết được Apple sẽ cắt giảm gì trên những mẫu iPhone cấp thấp. Vì vậy hãy cùng mình tiếp
+                        tục cập nhật những thông tin mới nhất về iPhone 14 để cùng đánh giá nhé!
+                    </p>
+                    <h3><strong>iPhone 14 sẽ có cảm biến vân tay ẩn dưới màn hình</strong></h3>
+                    <p>
+                        Trong một vài dự đoán mới nhất về iPhone 14 series của chuyên gia Ming-Chi Kuo, ông đã hé lộ rằng có thể Apple sẽ trang bị cảm biến vân tay dưới màn hình cho những chiếc smartphone này. Tuy nhiên, ông cũng chỉ ra rằng chiếc iPhone
+                        nào trong dòng iPhone 14 cũng được trang bị Touch ID. Vì vậy, mình dự đoán rằng với 2 chiếc smartphone cao cấp nhất, có thể tạm đặt tên là iPhone 14 Pro và iPhone 14 Pro Max sẽ được trang bị hệ thống cảm biến này.&nbsp;
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 sẽ được trang bị Touch ID dưới màn hình" data-original="https://cdn.tgdd.vn/Files/2021/04/15/1343505/iphone14_1266x710-800-resize.jpg" title="iPhone 14 sẽ được trang bị Touch ID dưới màn hình" class=" lazyloaded"
+                             src="https://cdn.tgdd.vn/Files/2021/04/15/1343505/iphone14_1266x710-800-resize.jpg">
+                    </div>
+                    <div class="captionnews">iPhone 14 sẽ được trang bị Touch ID dưới màn hình. Nguồn: Mac Rumors.</div>
+                    <p>
+                        Nếu tin đồn trên trở thành sự thật thì ắt hẳn các iFans sẽ vui lắm đây. Bởi rõ ràng Face ID tuy không phải là giải pháp bảo mật tệ nhưng lại khá cồng kềnh trong mùa đại dịch Covid này. Mặc dù Apple đã tung ra một vài giải pháp
+                        giúp mở khóa bằng khuôn mặt trở nên nhanh hơn như sử dụng kèm với Apple Watch tuy nhiên điều đó vẫn chưa thực sự giải quyết triệt để vấn đề. Vì vậy việc trang bị Touch ID dưới màn hình sẽ là cải tiến mới, giúp nâng cao trải
+                        nghiệm người dùng của Apple hơn.
+                    </p>
+                    <h3><strong>Cấu hình iPhone 14 mạnh mẽ với con chip mới nhất trong Apple M series?</strong></h3>
+                    <p>
+                        Nếu là 1 iFan chân chính, hẳn bạn đã theo dõi sự kiện WWDC21 vừa rồi của Apple. Đặc biệt, ngay khoảnh khắc nhà Táo giới thiệu tính năng Universal Control, không ít lần mình đã phải ồ lên bởi sự đồng bộ tuyệt vời giữa các thiết
+                        bị có sẵn trong hệ sinh thái của Apple như iPad, Macbook và iMac. Tuy nhiên, một câu hỏi lớn được đặt ra là tại sao không có sự góp mặt của chiếc iPhone nào vậy?
+                    </p>
+
+                    <h3><strong>iPhone 14 vẫn chưa được trang bị Face ID dưới màn hình</strong></h3>
+                    <p>
+                        Một thông tin đáng lưu ý nữa từ báo cáo của Kuo chính là Apple sẽ phát triển Face ID ẩn dưới màn hình vào năm 2023. Điều đó có nghĩa là các mẫu smartphone trong năm sau của Apple vẫn sử dụng cảm biến nhận diện gương mặt được bố
+                        trí ngay phần tai thỏ. Cũng có thể hiểu rằng ít nhất trong năm sau, Apple vẫn tiếp tục sử dụng thiết kế quen thuộc của mình từ thời <a href="https://www.thegioididong.com/dtdd/iphone-x-64gb" target="_blank" title="iPhone X"
+                                                                                                                                                               type="iPhone X">iPhone X</a>.
+                    </p>
+                    <div class="imgwrap">
+                        <img alt="iPhone 14 vẫn chưa thể có Face ID ẩn dưới màn hình." data-original="https://cdn.tgdd.vn/Files/2021/04/15/1343505/taitho-_1920x960-800-resize.jpg" title="iPhone 14 vẫn chưa thể có Face ID ẩn dưới màn hình." class=" lazyloaded"
+                             src="https://cdn.tgdd.vn/Files/2021/04/15/1343505/taitho-_1920x960-800-resize.jpg">
+                    </div>
+                    <div class="captionnews">iPhone 14 vẫn chưa thể có Face ID ẩn dưới màn hình.</div>
+                    <p>Cá nhân mình khá thích tính năng bảo mật bằng gương mặt của Apple. Tuy nhiên mình vẫn mong chờ Face ID ẩn dưới màn hình được xuất hiện ngay trên iPhone 14 thay vì phải đợi đến năm 2023.</p>
+                    <p>
+                        <em>
+                            Lưu ý: Bài viết sẽ được cập nhật liên tục cho đến khi iPhone 14 ra mắt chính thức. Các bạn
+                            nhớ cập nhật bài viết mỗi tuần nha!
+                        </em>
+                    </p>
+                    <p>Xem thêm:&nbsp;</p>
+                    <ul>
+                        <li>
+                            <a href="baiviet.html" target="_blank" title="Vì sao Apple vẫn không ra mắt iPhone có viền màn hình cong? Tìm hiểu lý do vì sao ngay trong bài viết này nhé" type="Vì sao Apple vẫn không ra mắt iPhone có viền màn hình cong? Tìm hiểu lý do vì sao ngay trong bài viết này nhé">
+                                Vì
+                                sao Apple vẫn không ra mắt iPhone có viền màn hình cong? Tìm hiểu lý do vì sao ngay
+                                trong bài viết này nhé
+                            </a>
+                        </li>
+                        <li>
+                            <a href="baiviet.html" target="_blank" title="Dự đoán giá bán iPhone 14 Pro Max: Cao cấp nhưng rẻ hơn bản tiền nhiệm" type="Dự đoán giá bán iPhone 14 Pro Max: Cao cấp nhưng rẻ hơn bản tiền nhiệm">
+                                Dự đoán
+                                giá bán iPhone 14 Pro Max: Cao cấp nhưng rẻ hơn bản tiền nhiệm
+                            </a>
+                        </li>
+                        <li>
+                            <a href="baiviet.html" target="_blank" title="Cấu hình iPhone 14 Pro Max: Chạy chip khủng, camera tân tiến và còn..." type="Cấu hình iPhone 14 Pro Max: Chạy chip khủng, camera tân tiến và còn...">
+                                Cấu hình
+                                iPhone 14 Pro Max: Chạy chip khủng, camera tân tiến và còn...
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+
+                <!-- sản phẩm dưới nội dung bài viết   -->
+
+                <div class="row" id="new2021">
+                    <a href="">
+                        <div class="col-xs-4">
+                            <img title="iPhone 14" src="https://cdn.tgdd.vn/Products/Images/42/240259/iphone-14-600x600.jpg">
+                        </div>
+                        <div class="col-xs-8">
+                            <h3>iPhone 14</h3>
+                            <h6>Tin đồn</h6>
+                            <figure>
+                                <span>Màn hình 6.1"</span>
+                                <span>RAM 4 GB, ROM 128 GB</span>
+                                <span>Camera sau: Đang cập nhật</span>
+                                <span>Camera trước: Đang cập nhật</span>
+                            </figure>
+                            <a href="chitietsp.html" class="viewdetail">Xem chi tiết</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" id="new2021">
+                    <a href="">
+                        <div class="col-xs-4">
+                            <img title="iPhone 14" src="https://cdn.tgdd.vn/Products/Images/42/240259/iphone-14-600x600.jpg">
+                        </div>
+                        <div class="col-xs-8">
+                            <h3>iPhone 14 Pro</h3>
+                            <h6>Tin đồn</h6>
+                            <figure>
+                                <span>Màn hình 6.1"</span>
+                                <span>RAM 8 GB,  ROM 1 TB</span>
+                                <span>Camera sau: Chính 12 MP &amp; Phụ 12 MP, 12 MP</span>
+                                <span>Camera trước: 12 MP</span>
+                            </figure>
+                            <a href="chitietsp.html" class="viewdetail">Xem chi tiết</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" id="new2021">
+                    <a href="">
+                        <div class="col-xs-4">
+                            <img title="iPhone 14" src="https://cdn.tgdd.vn/Products/Images/42/245545/iphone-14-max-600x600.jpg">
+                        </div>
+                        <div class="col-xs-8">
+                            <h3>iPhone 14 Max</h3>
+                            <h6>Tin đồn</h6>
+                            <figure>
+                                <span>Màn hình 6.7"</span>
+                                <span>RAM 6 GB,  ROM 128 GB</span>
+                                <span>Camera sau: Chính 12 MP &amp; Phụ 12 MP, 12 MP</span>
+                                <span>Camera trước: Đang cập nhật</span>
+                                <span> Sạc 20 W</span>
+                            </figure>
+                            <a href="chitietsp.html" class="viewdetail">Xem chi tiết</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" id="new2021">
+                    <a href="">
+                        <div class="col-xs-4">
+                            <img title="iPhone 14" src="https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-600x600.jpg">
+                        </div>
+                        <div class="col-xs-8">
+                            <h3>iPhone 14 Pro Max</h3>
+                            <h6>Tin đồn</h6>
+                            <figure>
+                                <span>Màn hình 6.7"</span>
+                                <span>RAM 6 GB,  ROM 128 GB</span>
+                                <span>Camera sau: Đang cập nhật</span>
+                                <span>Camera trước: Đang cập nhật</span>
+                                <span>Pin 4450 mAh</span>
+                            </figure>
+                            <a href="chitietsp.html" class="viewdetail">Xem chi tiết</a>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- slide -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="https://cdn.tgdd.vn/2021/12/banner/600x160(3)-600x160.png" alt="PR" style="width:100%;">
+
+                        </div>
+
+                        <div class="item">
+                            <img src="https://cdn.tgdd.vn/2021/11/banner/top-ip13pro-2880-800-1920x533-3.png" alt="PR" style="width:100%;">
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- bài viết liên quan -->
+                <h3>
+                    <strong>BÀI VIẾT LIÊN QUAN</strong></h1>
+                    <a href="tintuc.html">
+                        <div class="lienquan">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403462/iphone-se-2022-1_1280x720-800-resize.jpeg" alt="">
+                                    <p>iPhone SE (2022) sẽ trình làng vào Quý 1/2022, tương lai gây bất ngờ vì có khả năng là smartphone 5G rẻ nhất của Apple</p>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403448/applewatch_rugged_2_1280x720-800-resize.jpg" alt="">
+                                    <p>Apple Watch phiên bản 'siêu bền' sẽ ra mắt vào năm sau, ai hay phải hoạt động dưới điều kiện khắc nghiệt sẽ rất thích đây</p>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="https://cdn.tgdd.vn/Files/2021/12/09/1403372/iphone-1_1280x720-800-resize.jpeg" alt="">
+                                    <p>Thiết kế iPhone 14 Pro lộ diện rõ nét với camera sau to tướng, phần notch mới lạ kiểu viên thuốc, đúng ý iFans chưa?</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="https://cdn.tgdd.vn/Files/2021/12/08/1403205/razer-phone-cooler-chroma-hero-desktop_1280x720-800-resize.jpg" alt="">
+                                    <p>Razer ra mắt quạt tản nhiệt tích hợp đèn RGB: Tương thích MagSafe của iPhone 13, iPhone 12 và hỗ trợ cả smartphone Android</p>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="https://cdn.tgdd.vn/Files/2021/12/08/1403186/iphone-13-pro-max-2_1280x721-800-resize.jpg" alt="">
+                                    <p>iPhone 14 Max có thể sở hữu màn hình LTPS kích thước lớn nhưng chỉ hỗ trợ tốc độ làm tươi 60Hz, bạn nghĩ sao?</p>
+                                </div>
+                                <div class="col-xs-4">
+                                    <img src="https://cdn.tgdd.vn/Files/2021/12/06/1402595/macbook2022_7_1280x720-800-resize.jpg" alt="">
+                                    <p>
+                                        Apple sẽ phát hành loạt máy Mac chạy chip M2 trong năm 2022, MacBook Pro mới có thể sẽ trang bị chip M1X
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+    <script>
+        if (address_2 = localStorage.getItem('address_2_saved')) {
+            $('select[name="calc_shipping_district"] option').each(function () {
+                if ($(this).text() == address_2) {
+                    $(this).attr('selected', '')
+                }
+            })
+            $('input.billing_address_2').attr('value', address_2)
+        }
+        if (district = localStorage.getItem('district')) {
+            $('select[name="calc_shipping_district"]').html(district)
+            $('select[name="calc_shipping_district"]').on('change', function () {
+                var target = $(this).children('option:selected')
+                target.attr('selected', '')
+                $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                address_2 = target.text()
+                $('input.billing_address_2').attr('value', address_2)
+                district = $('select[name="calc_shipping_district"]').html()
+                localStorage.setItem('district', district)
+                localStorage.setItem('address_2_saved', address_2)
+            })
+        }
+        $('select[name="calc_shipping_provinces"]').each(function () {
+            var $this = $(this),
+                stc = ''
+            c.forEach(function (i, e) {
+                e += +1
+                stc += '<option value=' + e + '>' + i + '</option>'
+                $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+                if (address_1 = localStorage.getItem('address_1_saved')) {
+                    $('select[name="calc_shipping_provinces"] option').each(function () {
+                        if ($(this).text() == address_1) {
+                            $(this).attr('selected', '')
+                        }
+                    })
+                    $('input.billing_address_1').attr('value', address_1)
+                }
+                $this.on('change', function (i) {
+                    i = $this.children('option:selected').index() - 1
+                    var str = '',
+                        r = $this.val()
+                    if (r != '') {
+                        arr[i].forEach(function (el) {
+                            str += '<option value="' + el + '">' + el + '</option>'
+                            $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+                        })
+                        var address_1 = $this.children('option:selected').text()
+                        var district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('address_1_saved', address_1)
+                        localStorage.setItem('district', district)
+                        $('select[name="calc_shipping_district"]').on('change', function () {
+                            var target = $(this).children('option:selected')
+                            target.attr('selected', '')
+                            $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                            var address_2 = target.text()
+                            $('input.billing_address_2').attr('value', address_2)
+                            district = $('select[name="calc_shipping_district"]').html()
+                            localStorage.setItem('district', district)
+                            localStorage.setItem('address_2_saved', address_2)
+                        })
+                    } else {
+                        $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+                        district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('district', district)
+                        localStorage.removeItem('address_1_saved', address_1)
+                    }
+                })
+            })
+        })
+    </script>
+
+    <footer>
+        <div class="container1">
+            <div class="noi-dung about">
+                <h3>Về Chúng Tôi</h3>
+                <p>
+                    Thưa Quý khách hàng! Với tôn chỉ “Mang đến cho khách hàng không chỉ
+                    là những sản phẩm tốt, chất lượng cao, mà kèm theo đó
+                    là những dịch vụ tiện ích.”, công ty Công ty Cổ phần
+                    bán lẻ kỹ thuật số LCL đang từng bước phát triển
+                    và chiếm được lòng tin của khách hàng. Hiện tại, LCL có mạng lưới
+                    hơn 500 cửa hàng trên toàn quốc, các thế thệ nhân viên của công ty
+                    luôn giữ cho mình tinh thần khởi nghiệp mạnh mẽ, không chỉ tập trung tạo ra những giá trị lâu bền
+                    mà còn cam kết hành động đúng đắn vì lợi ích của khách hàng và đồng nghiệp.
+
+                </p>
+                <ul class="social-icon">
+                    <li>
+                        <a href="https://www.facebook.com/huuthien.nguyen.775"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100008650172158"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/LinhMin1314"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/phuloc.1212"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="noi-dung links">
+                <h3>Liên Kết</h3>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="chitietsp.html">Sản Phẩm</a></li>
+                    <li><a href="#">Giỏ Hàng</a></li>
+                    <li><a href="tintuc.html">24h Công Nghệ</a></li>
+                    <li><a href="tranglienhe/index.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="noi-dung contact">
+                <h3>Thông Tin Liên Hệ</h3>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <span>
+                            828 Sư Vạn Hạnh<br />
+                            Quận 10, Thành Phố Hồ Chí Minh<br />
+                            Việt Nam
+                        </span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone"></i></span>
+                        <p>
+                            <a href="#">1800 2097 (8h00 - 22h00)</a>
+                            <br />
+                            <a href="#">1800 2063 (8h00 - 21h30)</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope"></i></span>
+                        <p><a href="#">LCLShop.com.vn</a></p>
+                    </li>
+                    <li>
+                        <form class="form">
+                            <input type="email"
+                                   class="form__field"
+                                   placeholder="Đăng Ký Subscribe Email" />
+                            <button type="button" class="btn btn--primary uppercase">
+                                Gửi
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
